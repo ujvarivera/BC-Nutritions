@@ -1,0 +1,8 @@
+.alpackages/
+.alcache/
+.altemplates/
+.altestrunner/
+rad.json
+*.app
+*.g.xlf
+.snapshots
