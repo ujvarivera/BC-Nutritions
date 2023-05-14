@@ -14,6 +14,7 @@ table 50101 NutritionHeader
         {
             Caption = 'Vevőkód';
             DataClassification = CustomerContent;
+            TableRelation = Customer."No.";
         }
         field(3; "Customer Name"; Text[200])
         {

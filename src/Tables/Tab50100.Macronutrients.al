@@ -1,7 +1,7 @@
 table 50100 Macronutrients
 {
     Caption = 'Makrotápanyagok';
-    DataClassification = ToBeClassified;
+    DataClassification = CustomerContent;
 
     fields
     {
@@ -34,7 +34,7 @@ table 50100 Macronutrients
         {
             Caption = 'Mértékegység';
             DataClassification = CustomerContent;
-            TableRelation = "Unit of Measure";
+            TableRelation = "Unit of Measure".Code;
         }
         field(7; KJ; Decimal)
         {
