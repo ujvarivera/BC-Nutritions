@@ -22,6 +22,17 @@ table 50102 NutritionLine
             Caption = 'Tápanyag kód';
             DataClassification = CustomerContent;
             TableRelation = Macronutrients.Code;
+
+            trigger OnValidate()
+            var
+                Nutrient: Record Macronutrients;
+            begin
+                if Nutrient.Get(Rec."Nutrition Code") then
+                    Rec."Nutrition Name" := Nutrient.Description
+                else
+                    Rec."Nutrition Name" := '';
+            end;
+
         }
         field(4; "Nutrition Name"; Text[200])
         {
