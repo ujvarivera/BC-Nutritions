@@ -104,7 +104,8 @@ page 50101 "Nutrition Order"
 
                 trigger OnAction()
                 begin
-
+                    if Rec."Date" <> 0D then
+                        Rec.Status := Rec.Status::Closed;
                 end;
             }
 
@@ -119,7 +120,7 @@ page 50101 "Nutrition Order"
 
                 trigger OnAction()
                 begin
-
+                    Rec.Status := Rec.Status::Open;
                 end;
             }
 
