@@ -4,6 +4,8 @@ page 50100 "Nutrition Orders"
     PageType = List;
     UsageCategory = Lists;
     SourceTable = NutritionHeader;
+    Editable = false;
+    CardPageId = "Nutrition Order";
 
     layout
     {
