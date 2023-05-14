@@ -43,6 +43,28 @@ table 50102 NutritionLine
         {
             Caption = 'Mennyiség';
             DataClassification = CustomerContent;
+
+            trigger OnValidate()
+            var
+                MacroNutrient: Record Macronutrients;
+
+            begin
+                if MacroNutrient.Get(Rec."Nutrition Code") then begin
+                    Rec.Protein := MacroNutrient.Protein * Quantity;
+                    Rec.Fat := MacroNutrient.Fat * Quantity;
+                    Rec.Carbohydrate := MacroNutrient.Carbohydrate * Quantity;
+                    Rec.KJ := MacroNutrient.KJ * Quantity;
+                    Rec.Kcal := MacroNutrient.Kcal * Quantity;
+                end
+                else begin
+                    Rec.Protein := 0;
+                    Rec.Fat := 0;
+                    Rec.Carbohydrate := 0;
+                    Rec.KJ := 0;
+                    Rec.Kcal := 0;
+                end
+            end;
+
         }
         field(6; Protein; Decimal)
         {
