@@ -79,4 +79,14 @@ table 50101 NutritionHeader
             Clustered = true;
         }
     }
+
+    /*
+    trigger OnInsert()
+    var
+        NutritionManagement: Codeunit "Nutritional No. Mgt.";
+    begin
+        NutritionManagement.GetNoForNutrHeader(Rec);
+        Rec.Date := System.Today();
+    end;
+    */
 }
