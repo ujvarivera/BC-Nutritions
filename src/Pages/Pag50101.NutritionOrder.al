@@ -63,7 +63,12 @@ page 50101 "Nutrition Order"
                     ApplicationArea = All;
                     Editable = false;
                 }
+            }
 
+            part(Lines; "Nutrition Order Subform")
+            {
+                SubPageLink = "Nutritional No." = field("Nutritional No.");
+                ApplicationArea = All;
             }
         }
     }

@@ -43,7 +43,7 @@ table 50101 NutritionHeader
         }
         field(6; "Total Protein"; Decimal)
         {
-            Caption = 'Összes protein';
+            Caption = 'Összes fehérje';
             FieldClass = FlowField;
             CalcFormula = Sum(NutritionLine.Protein Where("Nutritional No." = field("Nutritional No.")));
         }
