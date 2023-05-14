@@ -15,6 +15,16 @@ table 50101 NutritionHeader
             Caption = 'Vevőkód';
             DataClassification = CustomerContent;
             TableRelation = Customer."No.";
+
+            trigger OnValidate()
+            var
+                Customer: Record Customer;
+            begin
+                if Customer.Get("Customer No.") then
+                    Rec."Customer Name" := Customer.Name
+                else
+                    Rec."Customer Name" := '';
+            end;
         }
         field(3; "Customer Name"; Text[200])
         {
