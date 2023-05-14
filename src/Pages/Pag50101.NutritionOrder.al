@@ -72,4 +72,72 @@ page 50101 "Nutrition Order"
             }
         }
     }
+
+    actions
+    {
+        area(Processing)
+        {
+            action(PostAction)
+            {
+                Caption = 'Könyvelés';
+                Image = "Invoicing-Send";
+                ApplicationArea = All;
+                ToolTip = 'Executes the Post Action';
+                Promoted = true;
+                PromotedOnly = true;
+
+                trigger OnAction()
+                begin
+
+                end;
+
+            }
+
+            action(CloseAction)
+            {
+                Caption = 'Lezárás';
+                Image = CloseDocument;
+                ApplicationArea = All;
+                ToolTip = 'Executes the Close Action';
+                Promoted = true;
+                PromotedOnly = true;
+
+                trigger OnAction()
+                begin
+
+                end;
+            }
+
+            action(OpenAction)
+            {
+                Caption = 'Újranyitás';
+                Image = ReOpen;
+                ApplicationArea = All;
+                ToolTip = 'Executes the Open Action';
+                Promoted = true;
+                PromotedOnly = true;
+
+                trigger OnAction()
+                begin
+
+                end;
+            }
+
+            action(ExportAction)
+            {
+                Caption = 'Exportálás';
+                Image = Export;
+                ApplicationArea = All;
+                ToolTip = 'Executes the Export Action';
+                Promoted = true;
+                PromotedOnly = true;
+
+                trigger OnAction()
+                begin
+
+                end;
+            }
+
+        }
+    }
 }
