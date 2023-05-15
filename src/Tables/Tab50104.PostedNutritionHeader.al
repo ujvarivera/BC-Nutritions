@@ -1,6 +1,6 @@
-table 50101 NutritionHeader
+table 50104 "Posted Nutrition Header"
 {
-    Caption = 'Táplálkozás Fejléce';
+    Caption = 'Könyvelt Táplálkozás Fejléce';
     DataClassification = CustomerContent;
 
     fields
@@ -14,24 +14,13 @@ table 50101 NutritionHeader
         {
             Caption = 'Vevőkód';
             DataClassification = CustomerContent;
-            TableRelation = Customer."No.";
-
-            trigger OnValidate()
-            var
-                Customer: Record Customer;
-            begin
-                if Customer.Get("Customer No.") then
-                    Rec."Customer Name" := Customer.Name
-                else
-                    Rec."Customer Name" := '';
-            end;
         }
         field(3; "Customer Name"; Text[200])
         {
             Caption = 'Vevőnév';
             DataClassification = CustomerContent;
         }
-        field(4; Date; Date)
+        field(4; "Date"; Date)
         {
             Caption = 'Dátum';
             DataClassification = CustomerContent;
@@ -67,7 +56,7 @@ table 50101 NutritionHeader
         }
         field(10; "Total Kcal"; Decimal)
         {
-            Caption = 'Összes kalória';
+            Caption = 'Összes Kcal';
             FieldClass = FlowField;
             CalcFormula = Sum(NutritionLine.Kcal Where("Nutritional No." = field("Nutritional No.")));
         }
@@ -79,14 +68,4 @@ table 50101 NutritionHeader
             Clustered = true;
         }
     }
-
-    /*
-    trigger OnInsert()
-    var
-        NutritionManagement: Codeunit "Nutritional No. Mgt.";
-    begin
-        NutritionManagement.GetNoForNutrHeader(Rec);
-        Rec.Date := System.Today();
-    end;
-    */
 }

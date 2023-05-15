@@ -1,27 +1,28 @@
-table 50102 NutritionLine
+table 50105 "Posted Nutrition Line"
 {
-    Caption = 'Táplálkozási sorok';
+    Caption = 'Könyvelt táplálkozás sorai';
     DataClassification = CustomerContent;
 
     fields
     {
         field(1; "Nutritional No."; Code[20])
         {
-            Caption = 'Táplálkozási szám';
-            DataClassification = CustomerContent;
+            Caption = 'Táplálkozási kód';
             TableRelation = NutritionHeader."Nutritional No.";
+            DataClassification = CustomerContent;
         }
-        field(2; "Serial No."; Integer) // Line number
+        field(2; "Serial No."; Integer)
         {
             AutoIncrement = true;
-            Caption = 'Sorozatszám';
+            Caption = 'Sorszám';
             DataClassification = CustomerContent;
         }
         field(3; "Nutrition Code"; Code[20])
         {
             Caption = 'Tápanyag kód';
             DataClassification = CustomerContent;
-            TableRelation = Macronutrients.Code;
+            TableRelation = Macronutrients."Code";
+            ValidateTableRelation = true;
 
             trigger OnValidate()
             var
@@ -32,14 +33,13 @@ table 50102 NutritionLine
                 else
                     Rec."Nutrition Name" := '';
             end;
-
         }
-        field(4; "Nutrition Name"; Text[200])
+        field(4; "Nutrition Name"; Text[100])
         {
             Caption = 'Megnevezés';
             DataClassification = CustomerContent;
         }
-        field(5; "Quantity"; Integer)
+        field(5; Quantity; Integer)
         {
             Caption = 'Mennyiség';
             DataClassification = CustomerContent;
@@ -64,7 +64,6 @@ table 50102 NutritionLine
                     Rec.Kcal := 0;
                 end
             end;
-
         }
         field(6; Protein; Decimal)
         {
