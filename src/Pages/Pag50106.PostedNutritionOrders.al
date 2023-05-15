@@ -6,6 +6,7 @@ page 50106 "Posted Nutrition Orders"
     SourceTable = "Posted Nutrition Header";
     UsageCategory = History;
     Editable = false;
+    CardPageId = "Posted Nutrition Order";
 
     layout
     {

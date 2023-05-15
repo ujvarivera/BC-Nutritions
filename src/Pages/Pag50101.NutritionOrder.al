@@ -87,8 +87,10 @@ page 50101 "Nutrition Order"
                 PromotedOnly = true;
 
                 trigger OnAction()
+                var
+                    PostNutrOrder: Codeunit "Post Nutrition Order";
                 begin
-
+                    PostNutrOrder.Post(Rec);
                 end;
 
             }
