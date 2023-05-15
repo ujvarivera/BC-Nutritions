@@ -16,6 +16,12 @@ table 50103 NoSeriesSetup
             DataClassification = CustomerContent;
             TableRelation = "No. Series".Code;
         }
+        field(3; "Posted Nutrient Nos."; Code[20])
+        {
+            Caption = 'Könyvelt tápanyagok számozása';
+            DataClassification = CustomerContent;
+            TableRelation = "No. Series".Code;
+        }
     }
     keys
     {

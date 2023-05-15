@@ -16,7 +16,10 @@ page 50105 "No. Series Setup"
                 {
                     ApplicationArea = All;
                 }
-
+                field("Posted Nutrient Nos."; Rec."Posted Nutrient Nos.")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }
