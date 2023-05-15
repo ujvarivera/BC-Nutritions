@@ -34,31 +34,31 @@ table 50104 "Posted Nutrition Header"
         {
             Caption = 'Összes fehérje';
             FieldClass = FlowField;
-            CalcFormula = Sum(NutritionLine.Protein Where("Nutritional No." = field("Nutritional No.")));
+            CalcFormula = Sum("Posted Nutrition Line".Protein Where("Nutritional No." = field("Nutritional No.")));
         }
         field(7; "Total Fat"; Decimal)
         {
             Caption = 'Összes zsír';
             FieldClass = FlowField;
-            CalcFormula = Sum(NutritionLine.Fat Where("Nutritional No." = field("Nutritional No.")));
+            CalcFormula = Sum("Posted Nutrition Line".Fat Where("Nutritional No." = field("Nutritional No.")));
         }
         field(8; "Total Carbohydrate"; Decimal)
         {
             Caption = 'Összes szénhidrát';
             FieldClass = FlowField;
-            CalcFormula = Sum(NutritionLine.Carbohydrate Where("Nutritional No." = field("Nutritional No.")));
+            CalcFormula = Sum("Posted Nutrition Line".Carbohydrate Where("Nutritional No." = field("Nutritional No.")));
         }
         field(9; "Total KJ"; Decimal)
         {
             Caption = 'Összes KJ';
             FieldClass = FlowField;
-            CalcFormula = Sum(NutritionLine.KJ Where("Nutritional No." = field("Nutritional No.")));
+            CalcFormula = Sum("Posted Nutrition Line".KJ Where("Nutritional No." = field("Nutritional No.")));
         }
         field(10; "Total Kcal"; Decimal)
         {
             Caption = 'Összes Kcal';
             FieldClass = FlowField;
-            CalcFormula = Sum(NutritionLine.Kcal Where("Nutritional No." = field("Nutritional No.")));
+            CalcFormula = Sum("Posted Nutrition Line".Kcal Where("Nutritional No." = field("Nutritional No.")));
         }
     }
     keys
