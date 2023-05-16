@@ -7,8 +7,9 @@ codeunit 50105 "Post Nutrition Order"
         PostedNutritionLine: Record "Posted Nutrition Line";
         NoSetup: Record NoSeriesSetup;
         NoSeriesMgt: Codeunit NoSeriesManagement;
+        // Mgt: Codeunit "Posted Nutrition No. Mgt.";
         DeleteQuestion: Label 'Törli a rendelést a könyvelés végeztével?';
-        ExitMessage: Label 'Sikeresen könyvelve';
+        ExitMessage: Label 'Sikeresen könyvelve!';
         ShouldBeDeleted: Boolean;
 
     begin
@@ -23,6 +24,7 @@ codeunit 50105 "Post Nutrition Order"
         PostedNutritionHeader.TransferFields(NutritionHeader);
         NoSetup.Get();
         PostedNutritionHeader."Nutritional No." := NoSeriesMgt.GetNextNo(NoSetup."Posted Nutrient Nos.", Today, true);
+        // Mgt.GetNoForPostedNutrHeader(PostedNutritionHeader);
         PostedNutritionHeader.Insert(true);
 
         NutritionLine.Reset();

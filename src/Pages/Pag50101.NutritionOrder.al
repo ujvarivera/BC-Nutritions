@@ -128,7 +128,7 @@ page 50101 "Nutrition Order"
 
             action(ExportAction)
             {
-                Caption = 'Exportálás';
+                Caption = 'Exportálás XML-be';
                 Image = Export;
                 ApplicationArea = All;
                 ToolTip = 'Executes the Export Action';
@@ -136,8 +136,12 @@ page 50101 "Nutrition Order"
                 PromotedOnly = true;
 
                 trigger OnAction()
+                var
+                    Success: Label 'Exportálás sikeresen megtörtént!';
                 begin
-
+                    CurrPage.SetSelectionFilter(Rec); // hogy csak az adott Nutrition Order-t exportálja, ne az összeset
+                    Xmlport.Run(50100, false, false, Rec);
+                    Message(Success);
                 end;
             }
 
