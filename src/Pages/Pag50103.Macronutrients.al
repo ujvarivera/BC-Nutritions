@@ -1,3 +1,6 @@
+/// <summary>
+/// List Page for Macronutrients. Uses the Macronutrients table.
+/// </summary>
 page 50103 Macronutrients
 {
     ApplicationArea = All;

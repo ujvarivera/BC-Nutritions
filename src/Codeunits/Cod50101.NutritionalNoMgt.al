@@ -1,3 +1,6 @@
+/// <summary>
+/// Codeunit for Managing Nutrition Order's Nutritonal No. (ID 50101).
+/// </summary>
 codeunit 50101 "Nutritional No. Mgt."
 {
     procedure GetNoForNutrHeader(var NutritionHeader: Record NutritionHeader)

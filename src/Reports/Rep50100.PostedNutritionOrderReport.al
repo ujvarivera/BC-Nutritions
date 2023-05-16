@@ -1,3 +1,6 @@
+/// <summary>
+/// Report for Posted Nutrition Orders (ID 50100).
+/// </summary>
 report 50100 "Posted Nutrition Order Report"
 {
     ApplicationArea = All;

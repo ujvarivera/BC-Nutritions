@@ -1,3 +1,6 @@
+/// <summary>
+/// Document Page for Posted Nutrition Order. Shows one Posted Nutrition Order. Uses the Posted Nutrition Header Table.
+/// </summary>
 page 50107 "Posted Nutrition Order"
 {
     Caption = 'Posted Nutrition Order';
@@ -9,6 +12,9 @@ page 50107 "Posted Nutrition Order"
     {
         area(content)
         {
+            /// <summary>
+            /// Header for Posted Nutrition Order.
+            /// </summary> 
             group(General)
             {
                 field("Nutritional No."; Rec."Nutritional No.")
@@ -52,6 +58,10 @@ page 50107 "Posted Nutrition Order"
                     ApplicationArea = All;
                 }
             }
+
+            /// <summary>
+            /// ListPart for Posted Nutrition Order.
+            /// </summary> 
             part(Lines; "Posted Nutrition Order Subform")
             {
                 SubPageLink = "Nutritional No." = field("Nutritional No.");

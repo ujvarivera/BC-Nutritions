@@ -1,3 +1,6 @@
+/// <summary>
+/// Header Table for Nutrition.
+/// </summary>
 table 50101 NutritionHeader
 {
     Caption = 'Táplálkozás Fejléce';

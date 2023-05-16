@@ -1,3 +1,6 @@
+/// <summary>
+/// Listpart Page for Posted Nutrition Order. Uses the Posted Nutrition Lines Table.
+/// </summary>
 page 50108 "Posted Nutrition Order Subform"
 {
     Caption = 'Posted Nutrition Order Subform';

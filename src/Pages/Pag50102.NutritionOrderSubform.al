@@ -1,3 +1,6 @@
+/// <summary>
+/// Listpart Page for Nutrition Order. Uses Nutrition Lines Table.
+/// </summary>
 page 50102 "Nutrition Order Subform"
 {
     Caption = 'Nutrition Order Subform';

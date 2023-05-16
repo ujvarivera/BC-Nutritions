@@ -1,3 +1,6 @@
+/// <summary>
+/// Lines Table for Posted Nutrition Order.
+/// </summary>
 table 50105 "Posted Nutrition Line"
 {
     Caption = 'Könyvelt táplálkozás sorai';

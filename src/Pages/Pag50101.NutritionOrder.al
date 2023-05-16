@@ -1,3 +1,6 @@
+/// <summary>
+/// Document Page for Nutrition Order. Uses the Nutrition Header table.
+/// </summary>
 page 50101 "Nutrition Order"
 {
     Caption = 'Nutrition Order';
@@ -8,6 +11,9 @@ page 50101 "Nutrition Order"
     {
         area(content)
         {
+            /// <summary>
+            /// Header for Nutrition Order.
+            /// </summary> 
             group(General)
             {
                 field("Nutritional No."; Rec."Nutritional No.")
@@ -65,6 +71,9 @@ page 50101 "Nutrition Order"
                 }
             }
 
+            /// <summary>
+            /// ListPart for Nutrition Order.
+            /// </summary> 
             part(Lines; "Nutrition Order Subform")
             {
                 SubPageLink = "Nutritional No." = field("Nutritional No.");

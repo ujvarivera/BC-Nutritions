@@ -1,3 +1,8 @@
+/// <summary>
+/// Page for Managing Series Numbers (Nutritional No.-s). Here you can add a Code for them from No. Series.
+/// (You have to add these codes to "No. Series." Page with Starting No. and Ending No., and also
+/// Default No.-s should be checked.)
+/// </summary>
 page 50105 "No. Series Setup"
 {
     Caption = 'No. Series Setup';

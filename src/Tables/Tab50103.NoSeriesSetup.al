@@ -1,3 +1,6 @@
+/// <summary>
+/// Series Number Setup Table for Nutrition Order and Posted Nutrition Order (Nutritional No.-s).
+/// </summary>
 table 50103 NoSeriesSetup
 {
     Caption = 'Nutritional No. Series Setup';

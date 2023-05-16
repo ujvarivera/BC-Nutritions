@@ -1,3 +1,6 @@
+/// <summary>
+/// Codeunit for Managing Posted Nutrition Order's Nutritonal No. (ID 50103).
+/// </summary>
 codeunit 50103 "Posted Nutrition No. Mgt."
 {
     procedure GetNoForPostedNutrHeader(var PostedNutritionHeader: Record "Posted Nutrition Header")

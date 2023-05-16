@@ -1,3 +1,6 @@
+/// <summary>
+/// Card Page for Macronutrient. Shows one macronutrient. Uses the Macronutrients table.
+/// </summary>
 page 50104 Macronutrient
 {
     Caption = 'Macronutrient';

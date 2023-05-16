@@ -1,5 +1,12 @@
+/// <summary>
+/// Codeunit for Posting the Nutrition Order (ID 50105).
+/// </summary>
 codeunit 50105 "Post Nutrition Order"
 {
+    /// <summary>
+    /// Post the Nutrition Order.
+    /// </summary>
+    /// <param name="NutritionHeader">VAR Record NutritionHeader.</param>
     procedure Post(var NutritionHeader: Record NutritionHeader)
     var
         NutritionLine: Record NutritionLine;

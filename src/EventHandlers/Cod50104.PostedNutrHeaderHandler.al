@@ -1,3 +1,6 @@
+/// <summary>
+/// Event Handler - Uses Codeunit for adding new Nutritional No. to Posted Nutrition Order (ID 50104).
+/// </summary>
 codeunit 50104 "Posted Nutr. Header Handler"
 {
     /*

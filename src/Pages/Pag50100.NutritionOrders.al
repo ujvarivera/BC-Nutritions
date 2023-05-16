@@ -1,3 +1,6 @@
+/// <summary>
+/// List Page for Nutrition Orders. Shows All Nutrition Orders. Uses the Nutrition Header table.
+/// </summary>
 page 50100 "Nutrition Orders"
 {
     Caption = 'Nutrition Orders';

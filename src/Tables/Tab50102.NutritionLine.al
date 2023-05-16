@@ -1,3 +1,6 @@
+/// <summary>
+/// Lines Table For Nutrition.
+/// </summary>
 table 50102 NutritionLine
 {
     Caption = 'Táplálkozási sorok';

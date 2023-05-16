@@ -1,3 +1,6 @@
+/// <summary>
+/// List Page for Nutrition Orders. Shows all Nutrition Orders which were posted. Uses the Posted Nutrition Header table.
+/// </summary>
 page 50106 "Posted Nutrition Orders"
 {
     ApplicationArea = All;

@@ -1,3 +1,6 @@
+/// <summary>
+/// XmlPort for Nutrition Order (ID 50100). In order to Export the data to XML file.
+/// </summary>
 xmlport 50100 "Nutrition Order"
 {
     Caption = 'Nutrition Order';

@@ -1,3 +1,6 @@
+/// <summary>
+/// Macronutrients Table.
+/// </summary>
 table 50100 Macronutrients
 {
     Caption = 'Makrotápanyagok';

@@ -1,3 +1,6 @@
+/// <summary>
+/// Header Table for Posted Nutrition Order.
+/// </summary>
 table 50104 "Posted Nutrition Header"
 {
     Caption = 'Könyvelt Táplálkozás Fejléce';
