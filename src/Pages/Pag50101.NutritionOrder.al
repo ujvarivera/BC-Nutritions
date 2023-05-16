@@ -27,7 +27,7 @@ page 50101 "Nutrition Order"
                 field("Date"; Rec."Date")
                 {
                     ApplicationArea = All;
-                    // Editable = false;
+                    Editable = false;
                 }
                 field("Total Protein"; Rec."Total Protein")
                 {
@@ -105,9 +105,16 @@ page 50101 "Nutrition Order"
                 PromotedOnly = true;
 
                 trigger OnAction()
+                var
+                    StatusMessage: Label 'Rendelés státusza módosítva lett! (Nyitott -> Lezárt)';
+                    StatusErrorMessage: Label 'Rendelés státusza nem módosítható, mivel nincs dátum megadva!';
                 begin
-                    if Rec."Date" <> 0D then
+                    if Rec."Date" <> 0D then begin
                         Rec.Status := Rec.Status::Closed;
+                        Message(StatusMessage);
+                    end
+                    else
+                        Message(StatusErrorMessage);
                 end;
             }
 
@@ -121,8 +128,11 @@ page 50101 "Nutrition Order"
                 PromotedOnly = true;
 
                 trigger OnAction()
+                var
+                    StatusMessage: Label 'Rendelés státusza módosítva lett! (Lezárt -> Nyitott)';
                 begin
                     Rec.Status := Rec.Status::Open;
+                    Message(StatusMessage);
                 end;
             }
 
