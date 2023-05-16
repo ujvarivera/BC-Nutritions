@@ -14,7 +14,7 @@ table 50102 NutritionLine
         field(2; "Serial No."; Integer) // Line number
         {
             AutoIncrement = true;
-            Caption = 'Sorozatszám';
+            Caption = 'Sorszám';
             DataClassification = CustomerContent;
         }
         field(3; "Nutrition Code"; Code[20])
